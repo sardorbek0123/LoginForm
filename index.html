@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign Up Form</title>
+  </head>
+  <body>
+    <section class="form">
+      <div class="container">
+        <div class="sign__up" id="signup">
+          <div class="sign__up__title">Do'nt have an account?</div>
+          <hr />
+          <div class="sign__up__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe est
+            impedit maxime, dolorum odit dolorem id laudantium molestiae.
+          </div>
+          <button class="sign__up__btn" onclick="removeButton('signup')">
+            Sign Up
+          </button>
+        </div>
+
+        <div class="login" id="login">
+          <div class="login__title">Have an account?</div>
+          <hr />
+          <div class="login__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+          <button
+            class="login__btn"
+            onclick="removeButton('login')"
+            id="button"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="forms" id="forms">
+      <form action="#" class="sign__up__form" id="signUpForm">
+        <h1 class="form__name">Sign Up</h1>
+        <hr />
+        <div class="name">
+          <input type="text" required class="text" />
+          <span class="placeholder name">Full name</span>
+          <img src="images/user.png" alt="username" class="icons" />
+        </div>
+        <div class="email">
+          <input type="text" class="text" required/>
+          <span class="placeholder email">Email</span>
+          <img src="images/email.png" alt="email" class="icons" />
+        </div>
+        <div class="password">
+          <input type="password" class="text" required />
+          <span class="placeholder password">Password</span>
+          <img src="images/password.png" alt="password" class="icons" />
+        </div>
+        <button type="submit" class="submit__btn">sign up</button>
+      </form>
+
+      <form action="#" class="login__form" id="loginForm">
+        <h1 class="form__name">Login</h1>
+        <hr />
+        <div class="name">
+          <input type="text" required class="text" />
+          <span class="placeholder name" aria-disabled="true">Full name</span>
+          <img src="images/user.png" alt="username" class="icons" />
+        </div>
+        <div class="password">
+          <input type="password" class="text" required />
+          <span class="placeholder password">Password</span>
+          <img src="images/password.png" alt="password" class="icons" />
+        </div>
+        <button type="submit" class="submit__btn">Login</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

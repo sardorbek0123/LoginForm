@@ -1,0 +1,204 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  background-image: url(images/body__bg.jpg);
+}
+
+.container {
+  margin: 200px auto;
+  margin-bottom: 0;
+  max-width: 920px;
+  max-height: 390px;
+
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(19, 92, 64, 0.82);
+}
+
+.sign__up {
+  opacity: 0;
+}
+
+.sign__up,
+.login {
+  margin: 60px auto;
+  width: 310px;
+  text-align: left;
+  transition: all 0.3s;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.sign__up__title,
+.login__title {
+  font-size: 28px;
+}
+
+hr {
+  height: 2px;
+  border: none;
+  background-color: rgb(52, 128, 216);
+  width: 40px;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.sign__up__btn,
+.login__btn,
+.submit__btn {
+  padding: 10px 25px;
+  margin-top: 20px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgb(52, 128, 216);
+  border-radius: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit__btn {
+  background-color: #f89a35;
+}
+
+.sign__up__btn:hover,
+.login__btn:hover,
+.submit__btn:hover {
+  color: rgb(52, 128, 216);
+  background-color: #ffffff;
+}
+
+.forms {
+  position: absolute;
+  top: 22%;
+  right: 53%;
+  min-height: 410px;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* transition: all 0.5s cubic-bezier(.42,-0.3,.78,1.25); */
+}
+
+.sign__up__form,
+.login__form {
+  padding: 30px 50px;
+}
+
+.login__form {
+  display: none;
+}
+
+form > div > input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 17rem;
+  z-index: 5;
+}
+
+.form__name {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 25px;
+  color: black;
+  font-weight: 300;
+}
+
+.placeholder {
+  position: absolute;
+  left: 50px;
+  color: #c6cedd;
+}
+
+.text:focus ~ .placeholder.name,
+.text:valid ~ .placeholder.name {
+  top: 25%;
+  transition: all 0.3s;
+  color: gray;
+}
+
+.text:focus ~ .placeholder.email,
+.text:valid ~ .placeholder.email {
+  top: 155px;
+  transition: all 0.3s;
+  color: gray;
+}
+
+.text:focus ~ .placeholder.password,
+.text:valid ~ .placeholder.password {
+  top: 200px;
+  transition: all 0.3s;
+  color: gray;
+}
+
+.login__form .text:focus ~ .placeholder.password,
+.login__form .text:valid ~ .placeholder.password {
+  top: 155px;
+  transition: all 0.3s;
+  color: gray;
+}
+
+.icons {
+  position: absolute;
+  right: 60px;
+}
+
+.toLeft {
+  right: 53%;
+}
+
+.toRight {
+  right: 22%;
+}
+
+@media only screen and (max-width: 768px) {
+  .forms {
+    position: relative;
+    max-height: 390px;
+    top: 25%;
+    margin: 0 auto;
+    margin-top: -365px;
+    width: 90%;
+  }
+
+  .toLeft {
+    right: 48%;
+  }
+
+  .toRight {
+    right: 3%;
+  }
+
+  .sign__up__form,
+  .login__form {
+    padding: 20px 40px;
+  }
+
+  .signup, .login {
+    opacity: 0;
+  }
+
+  form > div > input {
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .forms {
+    max-height: 390px;
+    top: 25%;
+  }
+
+  .toLeft {
+    right: 48%;
+  }
+
+  .toRight {
+    right: 7%;
+  }
+}
